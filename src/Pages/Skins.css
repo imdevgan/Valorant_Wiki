@@ -1,0 +1,8 @@
+.skins-display{
+    display: flex;
+    flex-direction: column;
+}
+
+.skins-img{    
+    max-width: 500px;
+}
