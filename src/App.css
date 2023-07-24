@@ -1,6 +1,7 @@
-body{
-  background-color: #3c4447;
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }

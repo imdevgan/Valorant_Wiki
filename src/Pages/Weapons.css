@@ -1,7 +1,8 @@
-body{
-  background-image: url(../Content/pxfuel.jpg);
-  background-attachment: fixed;
-  color: white;
+.heading {
+  margin-top: 0;
+  font-size: 4rem;
+  color: #ff4b50;
+  text-align: center;
 }
 
 .map {
@@ -10,12 +11,16 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("../Content/pxfuel.jpg");
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 20px;
 }
 
 .weapons {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 6px;
-  background-color: #0e1923;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  background-color: rgba(14, 25, 35, 0.92);
 }
 .weapons:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
@@ -41,9 +46,9 @@ body{
   justify-content: center;
   text-align: center;
 }
-table{
-    border-collapse: collapse;
-    width: 60%;
+table {
+  border-collapse: collapse;
+  width: 60%;
 }
 td,
 th {
@@ -51,9 +56,9 @@ th {
   padding: 8px;
   margin: 0;
 }
-th{
-    background-color: #ff4b50;
+th {
+  background-color: #ee464b;
 }
-td{
-    background-color: #081017;
+td {
+  background-color: #081017;
 }

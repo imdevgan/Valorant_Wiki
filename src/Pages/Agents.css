@@ -1,36 +1,64 @@
-img{
-    max-height:1000px;
+.background-img {
+  background-image: url("../Content/pxfuel.jpg");
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: darkmagenta;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+img {
+  max-height: 1000px;
+}
+.head {
+  padding-left: 20px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 
-.head{
-    padding-left: 20px;
+.roles {
+  text-align: center;
+  font-size: 3rem;
 }
 
-.logo{
-    padding-left: 20px;
-    max-height: 30px;
+.head-container {
+  padding: 0px 20px;
+  border: 1px solid white;
 }
 
-.role{
-    padding-left: 20px;
-    display: inline;
+.logo {
+  padding-left: 20px;
+  max-height: 30px;
 }
 
-.grid{
-    display: grid;  
-    grid-template-columns: 5fr 2fr;
-    padding-left: 20px;
+.role {
+  padding-left: 20px;
+  display: inline;
 }
 
-.img-container{
-    display:grid;
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  padding-left: 20px;
 }
 
-.char-img{
-    width: 50rem;    
-    height: 50rem;
-    grid-area: 1 / 1;
+.char-name {
+  font-size: 3rem;
 }
 
+.img-container {
+  display: grid;
+}
 
-
+.char-img {
+  width: 50rem;
+  height: 50rem;
+  grid-area: 1 / 1;
+}
+hr {
+  color: white;
+  width: 50%;
+}

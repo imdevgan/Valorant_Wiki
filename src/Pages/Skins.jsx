@@ -1,4 +1,4 @@
-import "./Skins.css"
+import "./Skins.css";
 import React from "react";
 import { useState } from "react";
 
@@ -14,16 +14,16 @@ function Skins() {
         return (
           <div>
             <p>{i.displayName}</p>
-            {i.skins.map((j)=>{
-                return <div>
-                <p>{j.displayName}</p>
-                {j.chromas.map((k)=>{
-                    return <div className="skins-display">
-                        <img className="skins-img" src={k.fullRender} alt="" />
-                    </div>
-                })}
+            {i.skins.map((j) => {
+              return (
+                <div>
+                  <p>{j.displayName}</p>
+                  <img className="skins-img" src={j.displayIcon} alt="" />
+                  {j.chromas.map((k) => {
+                    return <div className="skins-display"></div>;
+                  })}
                 </div>
-
+              );
             })}
           </div>
         );

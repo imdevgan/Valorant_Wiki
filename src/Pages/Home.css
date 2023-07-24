@@ -1,0 +1,22 @@
+.back-img {
+  background-image: url("../Content/pxfuel.jpg");
+  background-attachment: fixed;
+  background-color: rgba(255, 0, 0, 0.753);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.screen {
+  padding: 1px 20px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.game-desc {
+  width: 75%;
+}

@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 
 import FetchApi from "../Content/FetchApi";
-//#3c4447
 function Weapons() {
   const [data, SetData] = useState([]);
   return (
@@ -14,7 +13,7 @@ function Weapons() {
       {data.map((i) => {
         if (i.shopData != null)
           return (
-            <div className="weapons">
+            <div className="weapons" key={i.uuid}>
               <div className="f-container">
                 <div className="details">
                   <div className="l-container"></div>
@@ -24,20 +23,22 @@ function Weapons() {
                   <p>Magazine Size : {i.weaponStats.magazineSize}</p>
                   <p>Fire Rate : {i.weaponStats.fireRate}</p>
                 </div>
-                <img className="weapons-img" src={i.displayIcon} />
+                <img className="weapons-img" src={i.displayIcon} alt={`${i.displayName}_image`} />
               </div>
               <div className="stats">
                 <table>
-                  <tr>
-                    <th>Range</th>
-                    <th>Head</th>
-                    <th>Body</th>
-                    <th>Leg</th>
-                  </tr>
-                  {i.weaponStats.damageRanges.map((j) => {
-                    return (
-                      <>
-                        <tr>
+                  <thead>
+                    <tr>
+                      <th>Range</th>
+                      <th>Head</th>
+                      <th>Body</th>
+                      <th>Leg</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {i.weaponStats.damageRanges.map((j, index) => {
+                      return (
+                        <tr key={index}>
                           <td>
                             {j.rangeStartMeters} - {j.rangeEndMeters} m{" "}
                           </td>
@@ -51,19 +52,28 @@ function Weapons() {
                             <p>{Math.floor(j.legDamage)}</p>
                           </td>
                         </tr>
-                      </>
-                    );
-                  })}
+                      );
+                    })}
+                  </tbody>
                 </table>
               </div>
             </div>
           );
         else
           return (
-            <>
-              <h1>{i.displayName}</h1>
-              <img src={i.displayIcon} />
-            </>
+            <div className="weapons" key={i.uuid}>
+              <div className="f-container">
+                <div className="details">
+                  <div className="l-container"></div>
+                  <h1>Knife</h1>
+                  <p>Cost : {0}</p>
+                  <p>Category : Melee</p>
+                  <p>Magazine Size : INF</p>
+                  <p>Fire Rate : 1</p>
+                </div>
+                <img className="weapons-img" src={i.displayIcon} alt="knife_image" />
+              </div>
+            </div>
           );
       })}
     </div>
